@@ -18,4 +18,4 @@ thanksgiving_date = dt.date(2024,11,28)
 
 deltaTime = thanksgiving_date - today
 
-print("Days till thanksgiving: "+str(deltaTime))
+print("Days till thanksgiving: "+str(deltaTime.days))
