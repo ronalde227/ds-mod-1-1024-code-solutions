@@ -14,7 +14,7 @@ Exercise 1
 List = 'abcdefghijklmnopqrstuvwxyz'
 
 #Function takes in a string and creates a list of tuples for each
-#character with their index(index, char) Resubmitting
+#character with their index(index, char) (*Correction)
 def list_to_tuples(text):
   array_tuples = []
   for index in range(len(text)):
