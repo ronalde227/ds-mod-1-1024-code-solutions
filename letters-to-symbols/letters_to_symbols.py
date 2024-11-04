@@ -19,15 +19,24 @@ def letters_to_symbols(text):
   for index in range(len(text)):
     if current_char == text[index]:
       counter += 1
+
+      print("Entered first if statement 1:" + symbol_text)
       if(index == len(text)-1):
         symbol_text = symbol_text+str(counter)+current_char
+        print("Entered second if statement 2:" + symbol_text)
     else:
       symbol_text = symbol_text+str(counter)+current_char
       current_char = text[index]
       counter = 1
+      print("Entered third if statement 3:" + symbol_text)
+      print(current_char)
+      print(counter)
+      if(index == len(text)-1):
+        symbol_text = symbol_text+str(counter)+current_char
+        print("Entered second if statement 2:" + symbol_text)
 
   return symbol_text
 
-s="AAAABBBCCDAAA"
+s="ABBBc"
 
 letters_to_symbols(s)
