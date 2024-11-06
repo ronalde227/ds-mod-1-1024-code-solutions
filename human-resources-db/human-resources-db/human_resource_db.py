@@ -60,4 +60,3 @@ data3 = conn.execute("""
 
 merged_df = pd.DataFrame(data3)
 
-merged_df
