@@ -27,11 +27,9 @@ u_df = pd.read_csv("/content/u.data",sep = "\t", header=None)
 
 u_df
 
-u_df.to_csv("my_u.data", index=False, header=None)
+u_df.to_csv("my_u.data", index=False, header=None,sep='\t')
 
-
-
-my_u_df = pd.read_csv("my_u.data",header=None)
+my_u_df = pd.read_csv("my_u.data",sep='\t',header=None)
 
 my_u_df
 
