@@ -41,15 +41,11 @@ df.Cabin.value_counts()
 
 df['Cabin'] = df['Cabin'].apply(lambda x: df[df.Cabin.notnull()]['Cabin'].sample().values[0] if x != x else x)
 
-df.Cabin.value_counts()
+plt.bar(df['Cabin'].value_counts().index, df['Cabin'].value_counts().values)
 
 df.info()
 
 df.Cabin.isnull().sum()
-
-df['Cabin_Class_Mode'] = df.groupby('Pclass', group_keys=False)['Cabin'].apply(lambda x: x.fillna(x.mode()))
-
-df.Cabin_Class_Mode.value_counts()
 
 df.info()
 
@@ -62,6 +58,3 @@ df.drop("Cabin_Class_Mode", axis=1, inplace=True)
 #I then assigned cabin type by grouping to class. This again scewed the data in a similar way to random sampling since
 
 #I did not want to label null values in cabin as unknown because I do not think it would be helpful.
-
-df.info()
-
